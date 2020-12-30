@@ -19,16 +19,31 @@ add_action(
 			remove_action( 'et_header_top', 'et_add_mobile_navigation' );
 			add_action( 'et_header_top', 'custom_divi_mobile_navigation' );
 			add_action( 'wp_enqueue_scripts', 'custom_divi_theme_styles' );
+
+			// Search box fixes.
+			add_filter( 'et_get_option_et_divi_show_search_icon', '__return_false' );
+			add_action( 'et_header_top', 'custom_divi_theme_search' );
 		}
 
 	}
 );
 
 /**
+ * Add custom divi search.
+ */
+function custom_divi_theme_search() {
+	?>
+			<div id="et_top_search">
+				<span id="et_search_icon" class="et_search_icon"></span>
+			</div>
+	<?php
+}
+
+/**
  * Adds Custom CSS.
  */
 function custom_divi_theme_styles() {
-	wp_enqueue_style( 'divi_custom_style', plugin_dir_url( __FILE__ ) . 'css/divi-custom.css', '', '0.1' );
+	wp_enqueue_style( 'divi_custom_style', plugin_dir_url( __FILE__ ) . 'css/divi-custom.css', '', '0.2' );
 }
 
 /**

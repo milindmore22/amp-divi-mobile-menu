@@ -11,3 +11,25 @@ and open the template in the editor.
 .show {
     display: block;
 }
+
+/* Search box fixes */
+.et_search_outer.et_search_outer{
+    position: relative;
+}
+
+.container.et_search_form_container.search_show {
+    display: block;
+    opacity: 1;
+    position: relative;
+    width: 100%;
+    min-height: 50px;
+    border: 1px solid #ccc;
+}
+
+span.et_close_search_field{
+    display: none;
+}
+
+form.et-search-form{
+    min-width: 100%;
+}
