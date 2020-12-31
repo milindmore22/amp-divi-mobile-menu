@@ -33,3 +33,8 @@ span.et_close_search_field{
 form.et-search-form{
     min-width: 100%;
 }
+
+.et-search-form input {
+    width: 100%;
+    right: 0;
+}
